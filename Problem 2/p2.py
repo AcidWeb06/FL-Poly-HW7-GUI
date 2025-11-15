@@ -30,7 +30,6 @@ def handle_click(idx):
         ui.notify("You win!")
         restartButton = ui.button("Restart?", on_click=restart_game)
 
-
 def restart_game():
     shuffle(EMOJIS)
     matched.clear()

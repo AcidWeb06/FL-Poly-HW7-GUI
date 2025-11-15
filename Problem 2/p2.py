@@ -28,7 +28,6 @@ def handle_click(idx):
             ui.timer(0.5, lambda: reset_pair(opened[0], opened[1]), once=True)
     if len(matched) == 16:
         ui.notify("You win!")
-        restartButton = ui.button("Restart?", on_click=restart_game)
 
 def restart_game():
     shuffle(EMOJIS)
@@ -42,4 +41,5 @@ with ui.grid(columns = 4):
         button = ui.button("❓", on_click=lambda _, idx = i: handle_click(idx)).style("font-size: 30px").classes("h-30 w-30") 
         buttons.append(button)
 
+restartButton = ui.button("Restart?", on_click=restart_game)
 ui.run(title='Memory Game')

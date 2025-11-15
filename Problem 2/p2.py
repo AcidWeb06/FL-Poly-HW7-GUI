@@ -28,6 +28,15 @@ def handle_click(idx):
             ui.timer(0.5, lambda: reset_pair(opened[0], opened[1]), once=True)
     if len(matched) == 16:
         ui.notify("You win!")
+        restartButton = ui.button("Restart?", on_click=restart_game)
+
+
+def restart_game():
+    shuffle(EMOJIS)
+    matched.clear()
+    opened.clear()
+    for i in range(16):
+        buttons[i].set_text("❓")
 
 with ui.grid(columns = 4):
     for i in range(16):

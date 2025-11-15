@@ -16,7 +16,7 @@ def twistHash():
 with ui.column().classes("w-full"):   
     with ui.card().classes("h-65 w-200 self-auto"):
         ui.label("Hashing").style("color: green; font-size: 40px")
-        inputBox = ui.input()
+        inputBox = ui.input("Enter message")
         with ui.row():
             hashLabel = ui.label("Hash value: ").classes("font-mono text-lg")
             hashValue = ui.label("").classes("font-mono text-lg")
